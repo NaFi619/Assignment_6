@@ -17,7 +17,7 @@ const optionCards = () =>{
      
      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8  mx-auto px-4 py-12 w-3/4 h-80 ">
         {optionCardsjson.map((item) => (
-        <div key={item.id} className='card flex flex-col gap-4 justify-center items-center bg-white text-black'>
+        <div key={item.id} className='card flex flex-col gap-4 justify-center items-center bg-white text-black border border-gray-200 rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow'>
              
              <div className="absolute top-6 right-6 bg-purple-600 text-white w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold">
             {item.step}
