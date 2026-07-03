@@ -5,6 +5,7 @@ import FunctionalButton from '../functionalButton/functionalButton'
 import Footer from '../Footer/footer';
 import Habijhabi from '../habijabi/habijhabi';
 import Pricing from '../Pricing/pricing';
+import OptionCards from '../optionCards/optionCards';
 
 function App() {
   
@@ -15,6 +16,7 @@ function App() {
       <Banner />
       <ExtraPart />
       <FunctionalButton />
+      <OptionCards />
       <Pricing />
       <Habijhabi />
       <Footer />
