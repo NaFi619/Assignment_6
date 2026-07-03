@@ -1,0 +1,7 @@
+echo "# Assignment_6" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/NaFi619/Assignment_6.git
+git push -u origin main
