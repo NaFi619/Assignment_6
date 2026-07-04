@@ -88,5 +88,215 @@
       "Analytics dashboard"
     ],
     "hasIcon": true
+  },
+  {
+    "id": 7,
+    "title": "SEO Optimizer Suite",
+    "description": "Advanced on-page and off-page SEO tools to boost your website's search engine rankings.",
+    "price": "$45",
+    "billingPeriod": "/mo",
+    "badge": "Popular",
+    "badgeColor": "bg-purple-100 text-purple-800",
+    "features": [
+      "Keyword research",
+      "Rank tracking",
+      "Site audit reports"
+    ],
+    "hasIcon": true
+  },
+  {
+    "id": 8,
+    "title": "Video Editor Pro",
+    "description": "Professional video editing software with advanced cutting, transitions, and effects library.",
+    "price": "$99",
+    "billingPeriod": "/One-Time",
+    "badge": "Best Seller",
+    "badgeColor": "bg-yellow-100 text-yellow-800",
+    "features": [
+      "4K support",
+      "Green screen FX",
+      "Audio mixing tools"
+    ],
+    "hasIcon": true
+  },
+  {
+    "id": 9,
+    "title": "Logo Maker Studio",
+    "description": "Create stunning, professional logos using thousands of customizable templates and icons.",
+    "price": "$12",
+    "billingPeriod": "/mo",
+    "badge": "New",
+    "badgeColor": "bg-green-100 text-green-800",
+    "features": [
+      "500+ templates",
+      "SVG export",
+      "Commercial license"
+    ],
+    "hasIcon": true
+  },
+  {
+    "id": 10,
+    "title": "Cloud Storage Vault",
+    "description": "Secure, encrypted cloud storage solution for backing up and sharing sensitive files.",
+    "price": "$10",
+    "billingPeriod": "/mo",
+    "badge": "Popular",
+    "badgeColor": "bg-purple-100 text-purple-800",
+    "features": [
+      "100GB storage",
+      "End-to-end encryption",
+      "File versioning"
+    ],
+    "hasIcon": true
+  },
+  {
+    "id": 11,
+    "title": "Email Marketing Hub",
+    "description": "Automated email marketing platform to manage subscribers and boost conversion rates.",
+    "price": "$35",
+    "billingPeriod": "/mo",
+    "badge": "Best Seller",
+    "badgeColor": "bg-yellow-100 text-yellow-800",
+    "features": [
+      "Unlimited subscribers",
+      "Drag & drop builder",
+      "A/B testing"
+    ],
+    "hasIcon": true
+  },
+  {
+    "id": 12,
+    "title": "Project Manager Pro",
+    "description": "All-in-one project management tool for teams to organize tasks, track time, and collaborate.",
+    "price": "$25",
+    "billingPeriod": "/mo",
+    "badge": "New",
+    "badgeColor": "bg-green-100 text-green-800",
+    "features": [
+      "Kanban boards",
+      "Time tracking",
+      "Team collaboration"
+    ],
+    "hasIcon": true
+  },
+  {
+    "id": 13,
+    "title": "AI Image Generator",
+    "description": "Create stunning, photorealistic images and artwork instantly using powerful AI algorithms.",
+    "price": "$29",
+    "billingPeriod": "/mo",
+    "badge": "Popular",
+    "badgeColor": "bg-purple-100 text-purple-800",
+    "features": [
+      "Unlimited prompts",
+      "Multiple styles",
+      "4K resolution"
+    ],
+    "hasIcon": true
+  },
+  {
+    "id": 14,
+    "title": "Web Builder Platform",
+    "description": "Build stunning websites, portfolios, and landing pages without writing a single line of code.",
+    "price": "$15",
+    "billingPeriod": "/mo",
+    "badge": "Best Seller",
+    "badgeColor": "bg-yellow-100 text-yellow-800",
+    "features": [
+      "100+ templates",
+      "Custom domain",
+      "Mobile responsive"
+    ],
+    "hasIcon": true
+  },
+  {
+    "id": 15,
+    "title": "Data Analytics Dash",
+    "description": "Visualize data with interactive dashboards to gain actionable insights and make smarter decisions.",
+    "price": "$59",
+    "billingPeriod": "/One-Time",
+    "badge": "New",
+    "badgeColor": "bg-green-100 text-green-800",
+    "features": [
+      "Real-time sync",
+      "Custom widgets",
+      "Excel/CSV import"
+    ],
+    "hasIcon": true
+  },
+  {
+    "id": 16,
+    "title": "E-Commerce Manager",
+    "description": "Streamline inventory, orders, and customer communications for your online store.",
+    "price": "$49",
+    "billingPeriod": "/mo",
+    "badge": "Popular",
+    "badgeColor": "bg-purple-100 text-purple-800",
+    "features": [
+      "Inventory tracking",
+      "Automated emails",
+      "Multi-channel sync"
+    ],
+    "hasIcon": true
+  },
+  {
+    "id": 17,
+    "title": "Voiceover Studio",
+    "description": "Record, edit, and mix high-quality voiceovers and podcasts using industry-standard tools.",
+    "price": "$22",
+    "billingPeriod": "/mo",
+    "badge": "New",
+    "badgeColor": "bg-green-100 text-green-800",
+    "features": [
+      "Noise reduction",
+      "Multi-track editing",
+      "Audio effects"
+    ],
+    "hasIcon": true
+  },
+  {
+    "id": 18,
+    "title": "VPN Secure Pro",
+    "description": "Protect your online privacy and access geo-restricted content with high-speed VPN tunneling.",
+    "price": "$8",
+    "billingPeriod": "/mo",
+    "badge": "Popular",
+    "badgeColor": "bg-purple-100 text-purple-800",
+    "features": [
+      "5000+ servers",
+      "No-logs policy",
+      "Unlimited bandwidth"
+    ],
+    "hasIcon": true
+  },
+  {
+    "id": 19,
+    "title": "PDF Editor Pro",
+    "description": "Edit, convert, sign, and compress PDF files effortlessly with this comprehensive editor.",
+    "price": "$18",
+    "billingPeriod": "/One-Time",
+    "badge": "Best Seller",
+    "badgeColor": "bg-yellow-100 text-yellow-800",
+    "features": [
+      "Text editing",
+      "OCR scanner",
+      "File conversion"
+    ],
+    "hasIcon": true
+  },
+  {
+    "id": 20,
+    "title": "Live Chat Widget",
+    "description": "Add a real-time live chat widget to your website to instantly connect with your customers.",
+    "price": "$20",
+    "billingPeriod": "/mo",
+    "badge": "New",
+    "badgeColor": "bg-green-100 text-green-800",
+    "features": [
+      "Unlimited chats",
+      "Chatbot support",
+      "Customer ratings"
+    ],
+    "hasIcon": true
   }
 ]

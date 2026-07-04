@@ -1,4 +1,3 @@
-
 import cardInfo from "../CardsJson/cards.json";
 
 const FunctionalButton = ({ cart, onAddToCart, onOpenCart }) => {
@@ -19,7 +18,6 @@ const FunctionalButton = ({ cart, onAddToCart, onOpenCart }) => {
             Products
           </button>
           
-          {/* Use the passed down function to open cart */}
           <button 
             onClick={onOpenCart}
             className="px-8 py-3 text-base font-medium text-slate-800 bg-transparent rounded-full transition-colors hover:bg-slate-50"
@@ -29,56 +27,87 @@ const FunctionalButton = ({ cart, onAddToCart, onOpenCart }) => {
         </div>
       </div>
 
-      {/* card section */}
+      {/* CARD SECTION */}
       <div className="flex justify-center pt-10 pb-20">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl px-4">
           
-          {cardInfo.map((item) => (
-            <div key={item.id} className="bg-white border border-gray-200 rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow">
-              
-              <div className="flex justify-between items-start">
-                <div className="h-12 w-12 bg-gray-50 rounded-xl flex items-center justify-center text-2xl">
-                  {item.id === 1 && "📄"}
-                  {item.id === 2 && "🎨"}
-                  {item.id === 3 && "🖼️"}
-                  {item.id === 4 && "⚙️"}
-                  {item.id === 5 && "📝"}
-                  {item.id === 6 && "📱"}
+          {cardInfo.map((item) => {
+            // 1. Check if this specific item exists in the cart
+            const isInCart = cart.some(cartItem => cartItem.id === item.id);
+
+            return (
+              <div key={item.id} className="bg-white border border-gray-200 rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow">
+                
+                <div className="flex justify-between items-start">
+                  <div className="h-12 w-12 bg-gray-50 rounded-xl flex items-center justify-center text-2xl">
+                    {item.id === 1 && "📄"}
+                    {item.id === 2 && "🎨"}
+                    {item.id === 3 && "🖼️"}
+                    {item.id === 4 && "⚙️"}
+                    {item.id === 5 && "📝"}
+                    {item.id === 6 && "📱"}
+                    {item.id === 7 && "🔍"}
+                    {item.id === 8 && "🎬"}
+                    {item.id === 9 && "🖌️"}
+                    {item.id === 10 && "☁️"}
+                    {item.id === 11 && "📧"}
+                    {item.id === 12 && "📊"}
+                    {item.id === 13 && "🤖"}
+                    {item.id === 14 && "🌐"}
+                    {item.id === 15 && "📈"}
+                    {item.id === 16 && "🛒"}
+                    {item.id === 17 && "🎙️"}
+                    {item.id === 18 && "🔒"}
+                    {item.id === 19 && "📑"}
+                    {item.id === 20 && "💬"}
+                  </div>
+                  <span className={`text-xs font-medium px-2.5 py-1 rounded-full ${item.badgeColor}`}>
+                    {item.badge}
+                  </span>
                 </div>
-                <span className={`text-xs font-medium px-2.5 py-1 rounded-full ${item.badgeColor}`}>
-                  {item.badge}
-                </span>
-              </div>
 
-              <h3 className="text-xl font-bold mt-4 text-gray-900">{item.title}</h3>
-              <p className="text-gray-500 text-sm mt-2 leading-relaxed">{item.description}</p>
+                <h3 className="text-xl font-bold mt-4 text-gray-900">{item.title}</h3>
+                <p className="text-gray-500 text-sm mt-2 leading-relaxed">{item.description}</p>
 
-              <div className="mt-4">
-                <span className="text-2xl font-bold text-gray-900">{item.price}</span>
-                <span className="text-gray-500 text-sm">{item.billingPeriod}</span>
-              </div>
+                <div className="mt-4">
+                  <span className="text-2xl font-bold text-gray-900">{item.price}</span>
+                  <span className="text-gray-500 text-sm">{item.billingPeriod}</span>
+                </div>
 
-              <ul className="mt-4 flex flex-col gap-2 text-sm text-gray-600">
-                {item.features.map((feature, index) => (
-                  <li key={index} className="flex items-center gap-2">
-                    <svg className="w-4 h-4 text-green-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <ul className="mt-4 flex flex-col gap-2 text-sm text-gray-600">
+                  {item.features.map((feature, index) => (
+                    <li key={index} className="flex items-center gap-2">
+                      <svg className="w-4 h-4 text-green-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
+                      </svg>
+                      <span>{feature}</span>
+                    </li>
+                  ))}
+                </ul>
+
+                {/* 2. CONDITIONAL BUTTON LOGIC */}
+                {isInCart ? (
+                  <button 
+                    disabled 
+                    className="w-full mt-6 py-3 bg-green-600 text-white font-semibold rounded-xl cursor-not-allowed flex items-center justify-center gap-2"
+                  >
+                    <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
                     </svg>
-                    <span>{feature}</span>
-                  </li>
-                ))}
-              </ul>
+                    Added to Cart
+                  </button>
+                ) : (
+                  <button 
+                    onClick={() => onAddToCart(item)}
+                    className="w-full mt-6 py-3 bg-purple-600 hover:bg-purple-700 text-white font-semibold rounded-xl transition-colors"
+                  >
+                    Buy Now
+                  </button>
+                )}
 
-              {/* Use the passed down function to add to cart */}
-              <button 
-                onClick={() => onAddToCart(item)}
-                className="w-full mt-6 py-3 bg-purple-600 hover:bg-purple-700 text-white font-semibold rounded-xl transition-colors"
-              >
-                Buy Now
-              </button>
-
-            </div>
-          ))}
+              </div>
+            );
+          })}
           
         </div>
       </div>
