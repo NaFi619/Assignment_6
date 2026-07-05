@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Single Page App</title>
+    <script type="text/javascript">
+      var segmentCount = 0;
+      var location = window.location;
+      var path = location.pathname;
+      var segments = path.split('/').filter(Boolean);
+      var root = segments.slice(0, segmentCount).join('/');
+      var redirect = location.protocol + '//' + location.host + (root ? '/' + root : '') + '/?p=/' + segments.slice(segmentCount).join('/');
+      window.location.replace(redirect);
+    </script>
+  </head>
+  <body></body>
+</html>
