@@ -1,3 +1,8 @@
+import instagram from '../assets/Instagram.png';
+import facebook from '../assets/Facebook.png';
+import twitter from '../assets/fi_5968958.png';
+
+
 const Footer = () => {
   return (
     <>
@@ -35,13 +40,13 @@ const Footer = () => {
           <h6 className="footer-title text-gray-400 text-sm font-bold ">Social Links</h6>
           <div className="flex gap-4">
             <a className="bg-white p-2 rounded-full hover:bg-gray-200 transition-colors flex items-center justify-center w-10 h-10">
-              <img src="../assets/Instagram.png" alt="instagram" className="w-5 h-5" />
+              <img src={instagram} alt="instagram" className="w-5 h-5" />
             </a>
             <a className="bg-white p-2 rounded-full hover:bg-gray-200 transition-colors flex items-center justify-center w-10 h-10">
-              <img src="../assets/Facebook.png" alt="facebook" className="w-5 h-5" />
+              <img src={facebook} alt="facebook" className="w-5 h-5" />
             </a>
             <a className="bg-white p-2 rounded-full hover:bg-gray-200 transition-colors flex items-center justify-center w-10 h-10">
-              <img src="../assets/fi_5968958.png" alt="twitter" className="w-5 h-5" />
+              <img src={twitter} alt="twitter" className="w-5 h-5" />
             </a>
           </div>
     </div>

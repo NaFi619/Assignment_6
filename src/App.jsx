@@ -19,7 +19,6 @@ function App() {
     if (!existingItem) {
       const updatedCart = [...cart, product];
       setCart(updatedCart);
-      
     }
   };
 
@@ -29,8 +28,11 @@ function App() {
 
   return (
     <div className="relative min-h-screen bg-white">
-      {/* 1. PASS THE PROPS TO NAVBAR HERE */}
-      <Navbar cart={cart} onOpenCart={() => setIsCartOpen(true)} />
+      
+     
+      {!isCartOpen && (
+        <Navbar cart={cart} onOpenCart={() => setIsCartOpen(true)} />
+      )}
       
       <Banner />
       <ExtraPart />
@@ -46,7 +48,7 @@ function App() {
       <Habijabi />
       <Footer />
 
-      {/* Cart Overlay */}
+      
       {isCartOpen && (
         <div className="fixed inset-0 z-50 bg-white overflow-y-auto">
           <CartPage 

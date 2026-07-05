@@ -33,14 +33,14 @@ const NavBar = ({ cart, onOpenCart }) => {
         </div>
 
         <div className="navbar-end gap-4">
-          {/* 2. Cart Button with badge */}
+          
           <button 
             onClick={onOpenCart}
             className="relative p-2 hover:bg-gray-100 rounded-full transition-colors flex items-center"
           >
             <ShoppingCart className="w-6 h-6 text-gray-700" />
             
-            {/* Red Badge */}
+           
             {cart.length > 0 && (
               <span className="absolute -top-1 -right-1 bg-red-500 text-white text-[10px] font-bold w-5 h-5 rounded-full flex items-center justify-center border-2 border-white">
                 {cart.length}

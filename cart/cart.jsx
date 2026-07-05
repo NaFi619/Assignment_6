@@ -1,33 +1,28 @@
+import NavBar from '../NavBar/NavBar'; 
+
 const CartPage = ({ cart, onRemoveFromCart, onClose }) => {
-
-
-  
-
   
   const totalPrice = cart.reduce((sum, item) => {
     return sum + parseFloat(item.price.replace('$', ''));
   }, 0);
 
-  const iconMap = { 1: "📄", 2: "🎨", 3: "🖼️", 4: "⚙️", 5: "📝", 6: "📱",
-  7: "🔍", 8: "🎬", 9: "🖌️", 10: "☁️", 11: "📧", 12: "📊",
-  13: "🤖", 14: "🌐", 15: "📈", 16: "🛒", 17: "🎙️", 18: "🔒",
-  19: "📑", 20: "💬" };
+  const iconMap = { 
+    1: "📄", 2: "🎨", 3: "🖼️", 4: "⚙️", 5: "📝", 6: "📱",
+    7: "🔍", 8: "🎬", 9: "🖌️", 10: "☁️", 11: "📧", 12: "📊",
+    13: "🤖", 14: "🌐", 15: "📈", 16: "🛒", 17: "🎙️", 18: "🔒",
+    19: "📑", 20: "💬" 
+  };
 
   return (
-    
-    <div className="min-h-screen bg-white pt-20 pb-20 px-4 relative">
+    <div className="min-h-screen bg-white pb-20 px-4 relative">
       
-      <div className="functionalButton flex justify-center items-center pt-20 px-72 ">
-        <div className="flex flex-col gap-3">
-          <h1 className="text-5xl font-extrabold text-center text-black">Premium Digital Tools</h1>
-          <p className="text-center mt-4 text-[#627382] text-base">
-            Choose from our curated collection of premium digital products designed <br /> to boost your productivity and creativity.
-          </p>
-        </div>
-      </div>
+     
+      <NavBar cart={cart} onOpenCart={onClose} />
+
+      
       <button 
         onClick={onClose}
-        className="absolute top-6 right-6 text-3xl text-gray-800 hover:text-gray-600"
+        className="absolute top-6 right-6 text-3xl text-gray-800 hover:text-gray-600 z-50"
       >
         &times;
       </button>
